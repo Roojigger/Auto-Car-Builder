@@ -1,0 +1,8 @@
+<svg viewBox="0 0 16 16" stroke="#000" fill="currentColor" paint-order="stroke" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <circle stroke="currentColor" fill="none" paint-order="fill" cx="8" cy="8" r="6" />
+    <rect width="5" height="1.091676" x="10" y="7.5" />
+    <rect width="5" height="1.091676" x="1" y="7.454162" />
+    <rect width="1.091676" height="5" x="7.454162" y="10" />
+    <rect width="1.091676" height="5" x="7.408324" y="1" />
+    <path stroke="currentColor" fill="none" d="M8 10a2 2 0 1 1 0-4 2 2 0 1 1 0 4z" />
+</svg>

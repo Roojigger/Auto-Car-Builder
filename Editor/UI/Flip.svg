@@ -1,0 +1,5 @@
+<svg viewBox="0 0 16 16" fill="currentColor" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <rect width="1" height="14" x="7.5" y="1" />
+    <rect width="5.5" height="10" x="9.5" y="3" />
+    <path d="M1 13h5.5V3H1zM6 3.5v9H1.5v-9z" />
+</svg>

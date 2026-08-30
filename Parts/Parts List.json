@@ -1,0 +1,340 @@
+{
+	"1x1":
+		{   
+			"Dims": [1,1],
+			"Connectors": [[[0,0],"U"],
+					[[0,0],"D"],
+					[[0,0],"L"],
+					[[0,0],"R"]],
+			"Category": "Blocks",
+			"Flags": []
+		},
+	
+	"2x1":
+		{
+			"Dims": [2,1],
+			"Connectors": [[[0,0],"U"], [[1,0],"U"],
+						[[0,0],"D"], [[1,0],"D"],
+						[[0,0],"L"],
+						[[1,0],"R"]],
+			"Category": "Blocks",
+			"Flags": []
+		},
+	
+	"1x2" :
+		{
+			"Dims": [1,2],
+			"Connectors": [[[0,0],"U"],
+						[[0,1],"D"],
+						[[0,0],"L"], [[0,1],"L"],
+						[[0,0],"R"], [[0,1],"R"]],
+			"Category": "Blocks",
+			"Flags": []
+		},
+	
+	"Engine":
+		{
+			"Dims": [2,2],
+			"Connectors": [[[0,0],"U"], [[0,0],"L"],
+						[[1,0],"U"], [[1,0],"R"],
+						[[0,1],"L"], [[0,1],"D"],
+						[[1,1],"D"], [[1,1],"R"]],
+			"Category": "Thrust",
+			"Flags": ["Functional"]
+		},
+	
+	"Seat":
+		{
+			"Dims": [3,2],
+			"Connectors": [[[0,0],"U"], [[0,0],"L"],
+						[[1,0],"U"], [[2,0],"R"],
+						[[0,1],"L"], [[0,1],"D"],
+						[[1,1],"D"], [[2,1],"R"]],
+			"Category": "Utillity",
+			"Flags": ["Functional"]
+		},
+	
+	"Wheel 1x1 Left":
+		{
+			"Dims": [1,1],
+			"Connectors": [[[0,0],"D"]],
+			"Category": "Wheels",
+			"Flags": ["Functional"]
+		},
+	
+	"Wheel 1x1 Right":
+		{  
+			"Dims": [1,1],
+			"Connectors": [[[0,0],"U"]],
+			"Category": "Wheels",
+			"Flags": ["Functional"]
+		},
+	
+	"Wheel 3x1 Left":
+		{
+			"Dims": [3,1],
+			"Connectors": [[[1,0],"D"]],
+			"Category": "Wheels",
+			"Flags": ["Functional"]
+		},
+	
+	"Wheel 3x1 Right":
+		{
+			"Dims": [3,1],
+			"Connectors": [[[1,0],"U"]],
+			"Category": "Wheels",
+			"Flags": ["Functional"]
+		},
+
+	"Hinge Left":
+		{
+			"Dims": [1,1],
+			"Connectors": [[[0,0],"U"],
+						[[0,0],"D"]],
+			"Category": "Wheels",
+			"Flags": ["Functional"]
+		},
+	
+	"Hinge Right":
+		{
+			"Dims": [1,1],
+			"Connectors": [[[0,0],"U"],
+						[[0,0],"D"]],
+			"Category": "Wheels",
+			"Flags": ["Functional"]
+		},
+
+	"vProp":
+		{
+			"Dims": [3,3],
+			"Connectors": [[[1,1],"B"]],
+			"Category": "Thrust",
+			"Flags": ["Top Mounted"]
+		},
+	
+	"BCD 90":
+		{
+			"Dims": [1,2],
+			"Connectors": [[[0,0],"U"], [[1,0],"U"],
+						[[0,0],"D"], [[1,0],"D"],
+						[[0,0],"L"],
+						[[1,0],"R"]],
+			"Category": "Utillity",
+			"Flags": ["Functional"]
+		},
+	
+	"BCD" :
+		{
+			"Dims": [2,1],
+			"Connectors": [[[0,0],"U"],
+						[[0,1],"D"],
+						[[0,0],"L"], [[0,1],"L"],
+						[[0,0],"R"], [[0,1],"R"]],
+			"Category": "Utillity",
+			"Flags": ["Functional"]
+		},
+	
+	"Wing Blank":
+		{
+			"Dims": [1,2],
+			"Connectors": [[[0,0],"U"],
+						[[0,1],"D"]],
+			"Category": "Utillity",
+			"Flags": []
+		},
+	
+	"Wing" :
+		{
+			"Dims": [1,2],
+			"Connectors": [[[0,0],"U"],
+						[[0,1],"D"]],
+			"Category": "Utillity",
+			"Flags": []
+		},
+	
+	"Fuel Tank" :
+		{
+			"Dims": [1,2],
+			"Connectors": [[[0,0],"U"],
+						[[0,1],"D"],
+						[[0,0],"L"], [[0,1],"L"],
+						[[0,0],"R"], [[0,1],"R"]],
+			"Category": "Utillity",
+			"Flags": ["Functional"]
+		},
+
+	"Thruster":
+		{
+			"Dims": [2,1],
+			"Connectors": [[[0,0],"U"],
+						[[0,0],"D"],
+						[[0,0],"R"]],
+			"Category": "Thrust",
+			"Flags": ["Functional"]
+		},
+
+	"hProp Forward":
+		{
+			"Dims": [1,3],
+			"Connectors": [[[0,1],"L"]],
+			"Category": "Thrust",
+			"Flags": ["Functional"]
+		},
+	
+	"hProp Backward":
+		{
+			"Dims": [1,3],
+			"Connectors": [[[0,1],"R"]],
+			"Category": "Thrust",
+			"Flags": ["Functional"]
+		},
+		 
+	"hProp Wide Forward":
+		{
+			"Dims": [1,4],
+			"Connectors": [[[0,1],"L"],[[0,2],"L"]],
+			"Category": "Thrust",
+			"Flags": ["Functional"]
+		},
+	
+	"hProp Wide Backward":
+		{
+			"Dims": [1,4],
+			"Connectors": [[[0,1],"R"],[[0,2],"R"]],
+			"Category": "Thrust",
+			"Flags": ["Functional"]
+		},
+		
+	"U-Prop":
+		{
+			"Dims": [3,1],
+			"Connectors": [[[0,0],"U"],
+						[[0,0],"D"]],
+			"Category": "Thrust",
+			"Flags": []
+		},
+						
+	"Wedge 1x1":
+		{
+			"Dims": [1,1],
+			"Connectors": [[[0,0],"D"],
+						[[0,0],"L"]],
+			"Category": "Blocks",
+			"Flags": []
+		},
+
+	"Wedge 1x1 Flipped":
+		{
+			"Dims": [1,1],
+			"Connectors": [[[0,0],"U"],
+						[[0,0],"L"]],
+			"Category": "Blocks",
+			"Flags": []
+		},
+						
+	"Wedge 1x1 Inverted":
+		{
+			"Dims": [1,1],
+			"Connectors": [[[0,0],"U"],
+						[[0,0],"R"]],
+			"Category": "Blocks",
+			"Flags": []
+		},
+
+	"Wedge 1x1 Inverted Flipped":
+		{
+			"Dims": [1,1],
+			"Connectors": [[[0,0],"D"],
+						[[0,0],"R"]],
+			"Category": "Blocks",
+			"Flags": []
+		},
+						
+	"Wedge 2x1":
+		{
+			"Dims": [2,1],
+			"Connectors": [[[0,0],"D"], [[1,0],"D"],
+						[[0,0],"L"]],
+			"Category": "Blocks",
+			"Flags": []
+		},
+
+	"Wedge 2x1 Flipped":
+		{
+			"Dims": [2,1],
+			"Connectors": [[[0,0],"U"], [[1,0],"U"],
+						[[0,0],"L"]],
+			"Category": "Blocks",
+			"Flags": []
+		},
+
+	"Wedge 2x1 Inverted":
+		{
+			"Dims": [2,1],
+			"Connectors": [[[0,0],"U"], [[1,0],"U"],
+						[[1,0],"R"]],
+			"Category": "Blocks",
+			"Flags": []
+		},
+
+	"Wedge 2x1 Inverted Flipped":
+		{
+			"Dims": [2,1],
+			"Connectors": [[[0,0],"D"], [[1,0],"D"],
+						[[1,0],"R"]],
+			"Category": "Blocks",
+			"Flags": []
+		},
+	
+	"Wedge 1x2" :
+		{
+			"Dims": [1,2],
+			"Connectors": [[[0,1],"D"],
+						[[0,0],"L"], [[0,1],"L"]],
+			"Category": "Blocks",
+			"Flags": []
+		},
+
+	"Wedge 1x2 Flipped" :
+		{
+			"Dims": [1,2],
+			"Connectors": [[[0,1],"D"],
+						[[0,0],"R"], [[0,1],"R"]],
+			"Category": "Blocks",
+			"Flags": []
+		},
+
+	"Wedge 1x2 Inverted" :
+		{
+			"Dims": [1,2],
+			"Connectors": [[[0,0],"U"],
+						[[0,0],"R"], [[0,1],"R"]],
+			"Category": "Blocks",
+			"Flags": []
+		},
+
+	"Wedge 1x2 Inverted Flipped" :
+		{
+			"Dims": [1,2],
+			"Connectors": [[[0,0],"U"],
+						[[0,0],"L"], [[0,1],"L"]],
+			"Category": "Blocks",
+			"Flags": []
+		},
+			
+	"Mini Gun" :
+		{
+			"Dims": [3,1],
+			"Connectors": [[[1,0],"B"]],
+			"Category": "Utillity",
+			"Flags": ["Top Mounted", "Removed", "Functional"]
+		},
+	
+	"Flamethrower" :
+		{
+			"Dims": [3,1],
+			"Connectors": [[[1,0],"B"]],
+			"Category": "Utillity",
+			"Flags": ["Top Mounted", "Functional"]
+		}
+}

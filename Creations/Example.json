@@ -1,0 +1,114 @@
+{
+  "offset": [
+	4,
+	4
+  ],
+  "zoom": 1,
+	"parts": [
+	 {
+	   "part": "Seat",
+	   "pos": [
+		3,
+		1
+		]
+	 },
+	{
+	  "part": "Engine",
+	  "pos": [
+		1,
+		1
+	  ]
+	},
+	{
+	  "part": "Fuel Tank",
+	  "pos": [
+		6,
+		1
+	  ]
+	},
+	{
+	  "part": "2x1",
+	  "pos": [
+		1,
+		0
+	  ]
+	},
+	{
+	  "part": "2x1",
+	  "pos": [
+		1,
+		3
+	  ]
+	},
+	{
+	  "part": "Wedge 2x1",
+	  "pos": [
+		3,
+		0
+	  ]
+	},
+	{
+	  "part": "Wedge 2x1 Flipped",
+	  "pos": [
+		3,
+		3
+	  ]
+	},
+	{
+	  "part": "Wheel 3x1 Left",
+	  "pos": [
+		0,
+		-1
+	  ]
+	},
+	{
+	  "part": "Wheel 3x1 Right",
+	  "pos": [
+		0,
+		4
+	  ]
+	},
+	{
+	  "part": "Hinge Left",
+	  "pos": [
+		6,
+		0
+	  ]
+	},
+	{
+	  "part": "Hinge Right",
+	  "pos": [
+		6,
+		3
+	  ]
+	},
+	{
+	  "part": "Wheel 3x1 Left",
+	  "pos": [
+		5,
+		-1
+	  ]
+	},
+	{
+	  "part": "Wheel 3x1 Right",
+	  "pos": [
+		5,
+		4
+	  ]
+	},
+	{
+	  "part": "Wedge 1x2",
+	  "pos": [
+		7,
+		0
+	  ]
+	},
+	{
+	  "part": "Wedge 1x2 Flipped",
+	  "pos": [
+		7,
+		2
+	  ]
+	}
+  ]
+}
