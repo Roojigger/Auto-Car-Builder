@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Auto Car Builder"
-run/main_scene="uid://cpoegvpkd0te2"
+run/main_scene="uid://b5w3sttwv7h6w"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameState="*uid://b0pafej2ndlrd"
 
 [display]
 
@@ -73,4 +77,5 @@ editor_switch_part-={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"

@@ -15,7 +15,7 @@ func _draw():
 	if on:
 		var size = get_parent().size
 		var grid_size = 32 * zoom
-		var ofst = (offset - Vector2(fmod(size.x/2, 32), fmod(size.y/2, 32))) * zoom
+		var ofst = ((offset - Vector2(fmod(size.x/2, 32), fmod(size.y/2, 32))) + position) * zoom 
 		for i in range(int((ofst.x - size.x) / grid_size) - 1, int((size.x + ofst.x) / grid_size) + 1):
 			var x = i * grid_size - ofst.x
 			draw_line(Vector2(x, -size.y - 100), Vector2(x, size.y + 100), "000000")
