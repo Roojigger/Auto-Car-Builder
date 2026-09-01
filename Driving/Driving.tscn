@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b5w3sttwv7h6w"]
+
+[ext_resource type="Texture2D" uid="uid://daaf03r04d6hd" path="res://Driving/GroundTextures/Base.png" id="1_5jsyp"]
+[ext_resource type="Script" uid="uid://yc2hosqfmxsy" path="res://Driving/vehicle.gd" id="1_iinh3"]
+[ext_resource type="JSON" path="res://Creations/GunTest.json" id="3_iinh3"]
+[ext_resource type="JSON" path="res://Parts/Parts List.json" id="3_kv86b"]
+
+[node name="Driving" type="Node2D" unique_id=425236421]
+
+[node name="Ground" type="Sprite2D" parent="." unique_id=1269633937]
+z_index = -5
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("1_5jsyp")
+region_enabled = true
+region_rect = Rect2(32, 0, 32, 32)
+
+[node name="Vehicle" type="Node2D" parent="." unique_id=1547769753]
+position = Vector2(0, 0.035)
+script = ExtResource("1_iinh3")
+default_car = ExtResource("3_iinh3")
+parts_json = ExtResource("3_kv86b")
+
+[node name="Camera2D" type="Camera2D" parent="Vehicle" unique_id=849176253]

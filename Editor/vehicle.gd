@@ -121,6 +121,7 @@ func serialize():
 		var split = node.name.split('#')
 		var part = split[0]
 		var pos = Vector2i(int(split[1].split(',')[0]), int(split[1].split(',')[1]))
+		print(pos, split[1])
 		parts.append({"part": part, "pos": [pos.x, pos.y]})
 	var json = JSON.parse_string('{ "parts" : '+str(parts)+'}')
 	return json
@@ -134,7 +135,7 @@ func deserialize(json : JSON):
 	## Then load the parts back from json
 	for part in json.data["parts"]:
 		var node = Sprite2D.new()
-		node.name = part['part'] + '#' + str(part['pos'][0]) + ',' + str(part['pos'][1]) +'#'+str(Time.get_ticks_msec())
+		node.name = part['part'] + '#' + str(int(part['pos'][0])) + ',' + str(int(part['pos'][1])) +'#'+str(Time.get_ticks_msec())
 		
 		node.position = Vector2(part['pos'][0]*32, part['pos'][1]*32)
 		
