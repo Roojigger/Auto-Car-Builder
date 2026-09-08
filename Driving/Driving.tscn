@@ -1,19 +1,17 @@
 [gd_scene format=3 uid="uid://b5w3sttwv7h6w"]
 
-[ext_resource type="Texture2D" uid="uid://daaf03r04d6hd" path="res://Driving/GroundTextures/Base.png" id="1_5jsyp"]
 [ext_resource type="Script" uid="uid://yc2hosqfmxsy" path="res://Driving/vehicle.gd" id="1_iinh3"]
 [ext_resource type="JSON" path="res://Creations/GunTest.json" id="3_iinh3"]
 [ext_resource type="JSON" path="res://Parts/Parts List.json" id="3_kv86b"]
+[ext_resource type="Texture2D" uid="uid://bnjnij72d8wcf" path="res://Driving/GroundTextures/Tarmac.png" id="4_iinh3"]
 
 [node name="Driving" type="Node2D" unique_id=425236421]
 
-[node name="Ground" type="Sprite2D" parent="." unique_id=1269633937]
-z_index = -5
-texture_filter = 1
+[node name="Tarmac" type="Sprite2D" parent="." unique_id=1855499235]
 texture_repeat = 2
-texture = ExtResource("1_5jsyp")
+texture = ExtResource("4_iinh3")
 region_enabled = true
-region_rect = Rect2(32, 0, 32, 32)
+region_rect = Rect2(0, 0, 2000, 2000)
 
 [node name="Vehicle" type="Node2D" parent="." unique_id=1547769753]
 position = Vector2(0, 0.035)
