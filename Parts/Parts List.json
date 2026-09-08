@@ -363,7 +363,7 @@
 			"Connectors": [[[1,0],"B"]],
 			"Category": "Utillity",
 			"Flags": ["Top Mounted", "Removed", "Functional"],
-			"Script": "null"
+			"Script": "res://Driving/Functions/MiniGun.gd"
 		},
 	
 	"Flamethrower" :
@@ -371,6 +371,7 @@
 			"Dims": [3,1],
 			"Connectors": [[[1,0],"B"]],
 			"Category": "Utillity",
-			"Flags": ["Top Mounted", "Functional"]
+			"Flags": ["Top Mounted", "Functional"],
+			"Script": "null"
 		}
 }
