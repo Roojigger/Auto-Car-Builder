@@ -14,6 +14,7 @@ func _ready() -> void:
 	else:
 		part_data = parts_json.data;
 		deserialize(default_car.data)
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -188,10 +189,10 @@ func deserialize(json) -> void:
 
 		var joint = PinJoint2D.new()
 		joint.add_to_group("joints")
-		joint.bias = 1.0
+		joint.bias = 0.001
+		joint.softness = 200
 		joint.angular_limit_enabled = false
-		#joint.angular_limit_lower = deg_to_rad(-35)
-		#joint.angular_limit_upper = deg_to_rad(35)
+		joint.motor_enabled = false
 		joint.position = jc["pos"] - body_a.position
 		joint.node_a = body_a.get_path()
 		joint.node_b = body_b.get_path()

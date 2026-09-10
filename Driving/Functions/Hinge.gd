@@ -27,11 +27,7 @@ func _ready():
 	if best_joint:
 		joint = best_joint
 		other_body = get_node(joint.node_b) if joint.node_a == body.get_path() else get_node(joint.node_a)
-		joint.motor_enabled = true
-		joint.angular_limit_enabled = false
-		joint.disable_collision = true   # PinJoint2D has this built in
-		joint.softness = 0.1
-		joint.bias = 0.05
+		joint.disable_collision = true
 		pivot = joint.global_position
 	else:
 		print("No PinJoint2D found on ", name)

@@ -18,4 +18,4 @@ func _integrate_forces(state: PhysicsDirectBodyState2D):
 	var pivot = pivot_node.pivot
 	var new_offset = local_offset.rotated(target_rotation)
 	state.transform = Transform2D(target_rotation, pivot + new_offset)
-	state.angular_velocity = 0.0
+	#state.angular_velocity = 0.0
