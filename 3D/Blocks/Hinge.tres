@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="BlockDefinition" format=3 uid="uid://dwgp1irtg2qkg"]
+
+[ext_resource type="Script" uid="uid://dxpioiaadn8kr" path="res://3D/Block Behaviors/Hinge.gd" id="1_haong"]
+[ext_resource type="ArrayMesh" uid="uid://b42dyoblppi1c" path="res://3D/Block Models/Hinge.blend" id="1_voiqh"]
+[ext_resource type="Script" uid="uid://cmgldm7xxh4fy" path="res://3D/BlockDefinition.gd" id="1_y20bg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_voiqh"]
+size = Vector3(0, 0, 0)
+
+[resource]
+script = ExtResource("1_y20bg")
+mesh = ExtResource("1_voiqh")
+footprint = Vector3i(1, 1, 1)
+mass = 1.0
+collision_shape = SubResource("BoxShape3D_voiqh")
+behaviour_script = ExtResource("1_haong")
+metadata/_custom_type_script = "uid://cmgldm7xxh4fy"

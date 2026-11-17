@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="BlockDefinition" format=3 uid="uid://dwi7wi5mtttcw"]
+
+[ext_resource type="ArrayMesh" uid="uid://bsadooemoao7n" path="res://3D/Block Models/Wheel.blend" id="1_brn0d"]
+[ext_resource type="Script" uid="uid://cmgldm7xxh4fy" path="res://3D/BlockDefinition.gd" id="1_duyaj"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_brn0d"]
+height = 1.0
+radius = 2.0
+
+[resource]
+script = ExtResource("1_duyaj")
+mesh = ExtResource("1_brn0d")
+footprint = Vector3i(3, 3, 1)
+mass = 9.0
+collision_shape = SubResource("CylinderShape3D_brn0d")
+metadata/_custom_type_script = "uid://cmgldm7xxh4fy"

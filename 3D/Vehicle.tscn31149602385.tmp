@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cvdfyb3emeifg"]
+
+[ext_resource type="Script" uid="uid://crtmlnnjvt5do" path="res://3D/voxel_body.gd" id="2_snofa"]
+[ext_resource type="Script" uid="uid://coixcyhe7jchm" path="res://3D/BlockInstance.gd" id="3_lbua6"]
+[ext_resource type="Resource" uid="uid://dwtsqbaj7iovi" path="res://3D/Blocks/Seat.tres" id="3_snofa"]
+[ext_resource type="Resource" uid="uid://xrmdoo72n6lb" path="res://3D/Blocks/4x2x1.tres" id="4_so8je"]
+[ext_resource type="Resource" uid="uid://dgn5w46ihbo5t" path="res://3D/Blocks/2x2x2.tres" id="5_so8je"]
+[ext_resource type="Resource" uid="uid://dwgp1irtg2qkg" path="res://3D/Blocks/Hinge.tres" id="6_g31kb"]
+
+[sub_resource type="Resource" id="Resource_5u220"]
+script = ExtResource("3_lbua6")
+type = ExtResource("3_snofa")
+metadata/_custom_type_script = "uid://coixcyhe7jchm"
+
+[sub_resource type="Resource" id="Resource_lbua6"]
+script = ExtResource("3_lbua6")
+type = ExtResource("4_so8je")
+origin = Vector3i(-1, 0, 7)
+metadata/_custom_type_script = "uid://coixcyhe7jchm"
+
+[sub_resource type="Resource" id="Resource_so8je"]
+script = ExtResource("3_lbua6")
+type = ExtResource("5_so8je")
+origin = Vector3i(0, 0, 5)
+metadata/_custom_type_script = "uid://coixcyhe7jchm"
+
+[sub_resource type="Resource" id="Resource_kyyll"]
+script = ExtResource("3_lbua6")
+type = ExtResource("6_g31kb")
+origin = Vector3i(2, 0, 0)
+orientation = 20
+settings = Dictionary[String, Variant]({
+"Key/Left": 65,
+"Key/Right": 68
+})
+metadata/_custom_type_script = "uid://coixcyhe7jchm"
+
+[node name="Vehicle" type="Node3D" unique_id=1041873223]
+
+[node name="Chasis" type="RigidBody3D" parent="." unique_id=16499785]
+script = ExtResource("2_snofa")
+blocks = Array[ExtResource("3_lbua6")]([SubResource("Resource_5u220"), SubResource("Resource_lbua6"), SubResource("Resource_so8je"), SubResource("Resource_kyyll")])
+
+[node name="Right Wheel" type="RigidBody3D" parent="." unique_id=1807184324]

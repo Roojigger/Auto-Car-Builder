@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b5w3sttwv7h6w"]
 
 [ext_resource type="Script" uid="uid://yc2hosqfmxsy" path="res://Driving/vehicle.gd" id="1_iinh3"]
-[ext_resource type="JSON" path="res://Creations/Tester.json" id="3_iinh3"]
+[ext_resource type="JSON" path="res://Creations/Thrusters.json" id="3_iinh3"]
 [ext_resource type="JSON" path="res://Parts/Parts List.json" id="3_kv86b"]
 [ext_resource type="Texture2D" uid="uid://bnjnij72d8wcf" path="res://Driving/GroundTextures/Tarmac.png" id="4_iinh3"]
 

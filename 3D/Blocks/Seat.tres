@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BlockDefinition" format=3 uid="uid://dwtsqbaj7iovi"]
+
+[ext_resource type="ArrayMesh" uid="uid://bhbglqb7srge5" path="res://3D/Block Models/Seat.blend" id="1_bn8hq"]
+[ext_resource type="Script" uid="uid://cmgldm7xxh4fy" path="res://3D/BlockDefinition.gd" id="1_uhmlx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h3xdr"]
+size = Vector3(2, 2, 5)
+
+[resource]
+script = ExtResource("1_uhmlx")
+mesh = ExtResource("1_bn8hq")
+footprint = Vector3i(2, 2, 5)
+mass = 16.0
+collision_shape = SubResource("BoxShape3D_h3xdr")
+metadata/_custom_type_script = "uid://cmgldm7xxh4fy"
