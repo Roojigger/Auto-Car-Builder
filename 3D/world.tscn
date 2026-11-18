@@ -3,19 +3,22 @@
 [ext_resource type="PackedScene" uid="uid://cvdfyb3emeifg" path="res://3D/Vehicle.tscn" id="1_8vy5w"]
 [ext_resource type="Script" uid="uid://cvotse8gxni2h" path="res://3D/camera.gd" id="1_h3xdr"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gv5m4"]
-sky_top_color = Color(0.5044867, 0.6827642, 0.882254, 1)
-ground_bottom_color = Color(0.09803922, 0.11372549, 0.12941177, 1)
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_h3xdr"]
+rayleigh_coefficient = 2.37
+mie_coefficient = 0.27
+mie_eccentricity = 0.89
+sun_disk_scale = 37.6
+ground_color = Color(0.3569439, 0, 0.041990392, 1)
 
 [sub_resource type="Sky" id="Sky_mefj6"]
-sky_material = SubResource("ProceduralSkyMaterial_gv5m4")
+sky_material = SubResource("PhysicalSkyMaterial_h3xdr")
 
 [sub_resource type="Environment" id="Environment_f3sb7"]
 background_mode = 2
 sky = SubResource("Sky_mefj6")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1tbly"]
-albedo_color = Color(0.0864, 0.09, 0.08748, 1)
+albedo_color = Color(0.15469053, 0.1604541, 0.1546903, 1)
 metallic = 0.01
 metallic_specular = 0.2
 
@@ -42,10 +45,11 @@ transform = Transform3D(0.88189703, 0.3112034, -0.35413292, 0, 0.7511696, 0.6601
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6461726, 0)
 
 [node name="Floor" type="MeshInstance3D" parent="." unique_id=1348778600]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3802555, 0)
+transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 0, -1, 0)
 mesh = SubResource("PlaneMesh_xxb50")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Floor" unique_id=1198759650]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D" unique_id=916609791]
 shape = SubResource("WorldBoundaryShape3D_mefj6")
+debug_fill = false

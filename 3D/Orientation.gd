@@ -26,3 +26,22 @@ static func rotated(index: int, axis: Vector3i, reverse: bool) -> int:
 			return i
 	push_error("No matching orientation")
 	return index
+
+# Find the index for an arbitrary (axis-aligned) basis.
+static func index_of(b: Basis) -> int:
+	var t := table()
+	for i in t.size():
+		if t[i].is_equal_approx(b):
+			return i
+	push_error("Basis is not one of the 24 orientations")
+	return -1
+
+# Orientation index -> Euler angles in degrees (Godot's default YXZ order).
+static func to_euler_degrees(index: int) -> Vector3:
+	var e := to_basis(index).get_euler() * (180.0 / PI)
+	return e.snapped(Vector3(90, 90, 90))  # removes float noise like 89.99999
+
+# Euler angles in degrees -> orientation index. Angles must be multiples of 90.
+static func from_euler_degrees(deg: Vector3) -> int:
+	var b := Basis.from_euler(deg * (PI / 180.0))
+	return index_of(b)
