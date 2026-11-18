@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="BlockDefinition" format=3 uid="uid://dwi7wi5mtttcw"]
 
 [ext_resource type="ArrayMesh" uid="uid://bsadooemoao7n" path="res://3D/Block Models/Wheel.blend" id="1_brn0d"]
-[ext_resource type="Script" uid="uid://cmgldm7xxh4fy" path="res://3D/BlockDefinition.gd" id="1_duyaj"]
+[ext_resource type="Script" uid="uid://cmgldm7xxh4fy" path="res://3D/ResorceScripts/BlockDefinition.gd" id="1_duyaj"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_brn0d"]
 height = 1.0

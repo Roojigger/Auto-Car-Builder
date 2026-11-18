@@ -1,10 +1,11 @@
 extends RigidBody3D
 class_name VoxelBody
 
-@export var blocks: Array[BlockInstance] = []
+var blocks: Array[BlockInstance] = []
+var behaviours: Dictionary[Vector3i, BlockBehaviour] = {}
 
 func _ready() -> void:
-	
+	can_sleep = false
 	for block in blocks:
 		
 		var mesh_inst = MeshInstance3D.new()
@@ -26,6 +27,7 @@ func _ready() -> void:
 			var behaviour = Node3D.new()
 			behaviour.set_script(block.type.behaviour_script)
 			behaviour.setup(self, block, mesh_inst, col_shape)
+			behaviours[block.origin] = behaviour
 			add_child(behaviour)
 		
 	

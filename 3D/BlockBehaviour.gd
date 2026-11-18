@@ -14,7 +14,7 @@ func setup(p_body: VoxelBody, p_instance: BlockInstance, p_mesh: MeshInstance3D,
 	mesh = p_mesh
 	collition = p_collition
 
-func _unhandled_input(event: InputEvent) -> void:
-	pass  # override in thrusters, wheels, etc.
+func _unhandled_input(_event: InputEvent) -> void:
+	pass
 	
 func is_key_down(event: InputEvent, code : Key) -> bool: return event is InputEventKey and event.is_pressed() and event.physical_keycode == code

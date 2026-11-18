@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="BlockDefinition" format=3 uid="uid://xrmdoo72n6lb"]
 
-[ext_resource type="Script" uid="uid://cmgldm7xxh4fy" path="res://3D/BlockDefinition.gd" id="1_2ell6"]
+[ext_resource type="Script" uid="uid://cmgldm7xxh4fy" path="res://3D/ResorceScripts/BlockDefinition.gd" id="1_2ell6"]
 [ext_resource type="ArrayMesh" uid="uid://dhq10noiytmpd" path="res://3D/Block Models/4x2x1.blend" id="1_vppij"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y7m0l"]

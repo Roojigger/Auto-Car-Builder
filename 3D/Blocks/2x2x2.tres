@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="BlockDefinition" format=3 uid="uid://dgn5w46ihbo5t"]
 
 [ext_resource type="ArrayMesh" uid="uid://cebltdq875mmk" path="res://3D/Block Models/2x2x2.blend" id="1_650fk"]
-[ext_resource type="Script" uid="uid://cmgldm7xxh4fy" path="res://3D/BlockDefinition.gd" id="1_xccmf"]
+[ext_resource type="Script" uid="uid://cmgldm7xxh4fy" path="res://3D/ResorceScripts/BlockDefinition.gd" id="1_xccmf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_87b70"]
 size = Vector3(2, 2, 2)

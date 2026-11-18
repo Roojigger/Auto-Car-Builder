@@ -1,17 +1,62 @@
 extends BlockBehaviour
 
-var node : String
-var joint : Generic6DOFJoint3D
+var joint : HingeJoint3D
 
-func _process(delta: float) -> void:
-	if node and (get_node(node) and (get_node(node) is Generic6DOFJoint3D)):
-		joint = get_node(node)
+func attach_joint(l_joint: HingeJoint3D) -> void:
+	joint = l_joint
+	print(joint)
+
+var target_angle: float = 0.0
+var max_angle: float = 30
+
+func _ready() -> void:
+	while joint == null:
+		if not is_inside_tree():
+			return
+		await get_tree().process_frame
+	
+	joint.set_flag(HingeJoint3D.FLAG_USE_LIMIT, true)
+	joint.set_param(HingeJoint3D.PARAM_LIMIT_UPPER, deg_to_rad(max_angle))
+	joint.set_param(HingeJoint3D.PARAM_LIMIT_LOWER, -deg_to_rad(max_angle))
+	joint.set_flag(HingeJoint3D.FLAG_ENABLE_MOTOR, true)
+	joint.set_param(HingeJoint3D.PARAM_MOTOR_MAX_IMPULSE, 200)
+	
+	joint.exclude_nodes_from_collision = true
+
+func _physics_process(delta: float) -> void:
+	if not joint: return;
+	var angle = get_hinge_angle()
+	var new_angle = target_angle * 0.1 + angle * 0.9
+	var force = new_angle
+	
+	joint.set_param(HingeJoint3D.PARAM_MOTOR_TARGET_VELOCITY, force)
+	
 
 func _unhandled_input(event: InputEvent) -> void:
-	if not joint: return;
-	if (is_key_down(event, instance.settings["Key/Left"])):
-		joint.set_param_y(Generic6DOFJoint3D.PARAM_ANGULAR_MOTOR_TARGET_VELOCITY, -1)
-	elif (is_key_down(event, instance.settings["Key/Right"])):
-		joint.set_param_y(Generic6DOFJoint3D.PARAM_ANGULAR_MOTOR_TARGET_VELOCITY, 1)
+	if is_key_down(event, instance.settings["Key/Left"]):
+		target_angle = -max_angle
+	elif is_key_down(event, instance.settings["Key/Right"]):
+		target_angle = max_angle
 	else:
-		joint.set_param_y(Generic6DOFJoint3D.PARAM_ANGULAR_MOTOR_TARGET_VELOCITY, 0)
+		target_angle = 0
+
+
+var _rest_rel: Basis
+
+func _capture_rest() -> void:
+	var a: Node3D = get_node(joint.node_a)
+	var b: Node3D = get_node(joint.node_b)
+	_rest_rel = a.global_basis.orthonormalized().inverse() * b.global_basis.orthonormalized()
+
+func get_hinge_angle() -> float:
+	var a: Node3D = joint.get_node(joint.node_a)
+	var b: Node3D = joint.get_node(joint.node_b)
+	print(joint.node_a)
+	var rel := a.global_basis.orthonormalized().inverse() * b.global_basis.orthonormalized()
+	var q := (rel * _rest_rel.inverse()).get_rotation_quaternion()
+
+	# The hinge axis in body A's local space. This works when the joint is a child of node_a.
+	var axis := joint.transform.basis.z
+
+	var s := Vector3(q.x, q.y, q.z).dot(axis)
+	return wrapf(2.0 * atan2(s, q.w), -PI, PI)  # radians, signed
