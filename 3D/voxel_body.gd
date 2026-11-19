@@ -6,7 +6,7 @@ var behaviours: Dictionary[Vector3i, BlockBehaviour] = {}
 
 func _ready() -> void:
 	can_sleep = false
-	for block in blocks:
+	for block: BlockInstance in blocks:
 		
 		var mesh_inst = MeshInstance3D.new()
 		var col_shape = CollisionShape3D.new()
@@ -16,9 +16,10 @@ func _ready() -> void:
 		
 		var f := Vector3(block.type.footprint)
 		var b := Orientation.to_basis(block.orientation)
-		var t := Transform3D(b, Vector3(block.origin) + (b * f).abs() * 0.5)
-		mesh_inst.transform = t
-		col_shape.transform = t
+		var mesh_t := Transform3D(b, Vector3(block.origin) + (b * f).abs() * 0.5)
+		mesh_inst.transform = mesh_t
+		var col_t := Transform3D(b * Basis.from_euler(block.type.collider_rotation), Vector3(block.origin) + (b * f).abs() * 0.5)
+		col_shape.transform = col_t
 		
 		add_child(mesh_inst)
 		add_child(col_shape)

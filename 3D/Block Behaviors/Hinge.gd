@@ -7,10 +7,10 @@ func attach_joint(l_joint: HingeJoint3D) -> void:
 	print(joint)
 
 var target_angle: float = 0.0
-var max_angle: float = 15
+var max_angle: float    = 15
 
-var gain := 5.0
-var max_speed := 4.0  # rad/s
+var gain: float      = 20.0
+var max_speed: float = 8.0  # rad/s
 
 func _ready() -> void:
 	while joint == null:
@@ -22,7 +22,7 @@ func _ready() -> void:
 	joint.set_param(HingeJoint3D.PARAM_LIMIT_UPPER, deg_to_rad(max_angle))
 	joint.set_param(HingeJoint3D.PARAM_LIMIT_LOWER, -deg_to_rad(max_angle))
 	joint.set_flag(HingeJoint3D.FLAG_ENABLE_MOTOR, true)
-	joint.set_param(HingeJoint3D.PARAM_MOTOR_MAX_IMPULSE, 2)
+	joint.set_param(HingeJoint3D.PARAM_MOTOR_MAX_IMPULSE, 20)
 	
 	joint.exclude_nodes_from_collision = true
 
@@ -32,7 +32,6 @@ func _physics_process(_delta: float) -> void:
 	var error := angle_difference(get_hinge_angle(), target_angle)
 	var velocity := -clampf(error * gain, -max_speed, max_speed)
 	joint.set_param(HingeJoint3D.PARAM_MOTOR_TARGET_VELOCITY, velocity)
-	
 
 func _unhandled_input(event: InputEvent) -> void:
 	if is_key_down(event, instance.settings["Key/Left"]):

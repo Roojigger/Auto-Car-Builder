@@ -5,4 +5,5 @@ class_name BlockDefinition
 @export var footprint : Vector3i
 @export var mass : float
 @export var collision_shape : Shape3D
+@export var collider_rotation : Vector3
 @export var behaviour_script : Script

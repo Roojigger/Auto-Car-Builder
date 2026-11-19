@@ -52,15 +52,15 @@ metadata/_custom_type_script = "uid://coixcyhe7jchm"
 [sub_resource type="Resource" id="Resource_u80ck"]
 script = ExtResource("3_lbua6")
 type = ExtResource("8_qv802")
-origin = Vector3i(2, -1, 7)
-orientation = 9
+origin = Vector3i(3, -1, 6)
+orientation = 20
 metadata/_custom_type_script = "uid://coixcyhe7jchm"
 
 [sub_resource type="Resource" id="Resource_k36kf"]
 script = ExtResource("3_lbua6")
 type = ExtResource("8_qv802")
-origin = Vector3i(-3, -1, 7)
-orientation = 10
+origin = Vector3i(-2, -1, 6)
+orientation = 22
 metadata/_custom_type_script = "uid://coixcyhe7jchm"
 
 [sub_resource type="Resource" id="Resource_5u220"]
@@ -71,8 +71,8 @@ metadata/_custom_type_script = "uid://bfr1madoa4ubn"
 [sub_resource type="Resource" id="Resource_2i1wy"]
 script = ExtResource("3_lbua6")
 type = ExtResource("8_qv802")
-origin = Vector3i(2, -1, 0)
-orientation = 9
+origin = Vector3i(3, -1, -1)
+orientation = 20
 metadata/_custom_type_script = "uid://coixcyhe7jchm"
 
 [sub_resource type="Resource" id="Resource_pdeer"]
@@ -83,8 +83,8 @@ metadata/_custom_type_script = "uid://bfr1madoa4ubn"
 [sub_resource type="Resource" id="Resource_qv802"]
 script = ExtResource("3_lbua6")
 type = ExtResource("8_qv802")
-origin = Vector3i(-3, -1, 0)
-orientation = 10
+origin = Vector3i(-2, -1, -1)
+orientation = 22
 metadata/_custom_type_script = "uid://coixcyhe7jchm"
 
 [sub_resource type="Resource" id="Resource_n46io"]
