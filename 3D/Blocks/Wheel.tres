@@ -1,17 +1,14 @@
 [gd_resource type="Resource" script_class="BlockDefinition" format=3 uid="uid://dwi7wi5mtttcw"]
 
-[ext_resource type="ArrayMesh" uid="uid://bsadooemoao7n" path="res://3D/Block Models/Wheel.blend" id="1_brn0d"]
-[ext_resource type="Script" uid="uid://cmgldm7xxh4fy" path="res://3D/ResorceScripts/BlockDefinition.gd" id="1_duyaj"]
+[ext_resource type="Script" uid="uid://cx6kvddsdmqo6" path="res://3D/ResorceScripts/WheelDefinition.gd" id="1_duyaj"]
+[ext_resource type="ArrayMesh" uid="uid://bb6tc2qehq57b" path="res://3D/Block Models/Tire.tres" id="2_brn0d"]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_brn0d"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_duyaj"]
 height = 1.0
-radius = 4.0
+radius = 2.0
 
 [resource]
 script = ExtResource("1_duyaj")
-mesh = ExtResource("1_brn0d")
-footprint = Vector3i(3, 3, 1)
-mass = 9.0
-collision_shape = SubResource("CylinderShape3D_brn0d")
-collider_rotation = Vector3(90, 0, 0)
-metadata/_custom_type_script = "uid://cmgldm7xxh4fy"
+wheel_mesh = ExtResource("2_brn0d")
+wheel_collision_shape = SubResource("CylinderShape3D_duyaj")
+metadata/_custom_type_script = "uid://cx6kvddsdmqo6"
